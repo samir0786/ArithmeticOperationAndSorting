@@ -16,5 +16,10 @@ function operation2() {
 function operation1() {
    echo $(($(($a+$b)) * $c))
 }
-operation4 $a $b $c
 
+declare -A results
+results["operation1"]=$(operation1 $a $b $c)
+results["operation2"]=$(operation2 $a $b $c)
+results["operation3"]=$(operation3 $a $b $c)
+results["operation4"]=$(operation4 $a $b $c)
+echo ${results[@]}
