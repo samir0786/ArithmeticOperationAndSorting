@@ -38,7 +38,7 @@ function DescendingOrder() {
 	do
 		for(( j=i+1; j<=$length; j++ ))
 		do
-			if [[ ${arr[i]%.*} -lt ${arr[j]%.*} ]]
+			if [[ ${arr[i]%.*} -gt ${arr[j]%.*} ]]
 			then
 				temp=${arr[i]}
 				arr[i]=${arr[j]}
