@@ -14,7 +14,7 @@ function operation2() {
 }
 
 function operation1() {
-   echo $(($(($1+$2)) * $3))
+   echo $(($(($a+$b)) * $c))
 }
 operation4 $a $b $c
 
