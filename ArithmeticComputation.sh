@@ -1,4 +1,8 @@
 #!/bin/bash/-x
-echo "Arithmetic Operation And Sorting"
 read -p "Enter three number: " a b c
-echo "$a $b $c"
+
+function operation1() {
+   echo $(($(($1+$2)) * $3))
+}
+operation1 $a $b $c
+
