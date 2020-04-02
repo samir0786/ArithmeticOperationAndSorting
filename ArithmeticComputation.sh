@@ -1,5 +1,9 @@
-#!/bin/bash/-x
+#!/bin/bash/ -x
 read -p "Enter three number: " a b c
+
+function operation2() {
+   echo $(($(($a*$b)) + c))
+}
 
 function operation1() {
    echo $(($(($1+$2)) * $3))
