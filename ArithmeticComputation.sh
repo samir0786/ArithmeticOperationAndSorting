@@ -23,6 +23,7 @@ results["operation1"]=$(operation1 $a $b $c)
 results["operation2"]=$(operation2 $a $b $c)
 results["operation3"]=$(operation3 $a $b $c)
 results["operation4"]=$(operation4 $a $b $c)
+#echo ${results[@]}
 
 while [[ $count -ne ${#results[@]} ]]
 do
@@ -32,12 +33,12 @@ done
 echo ${arr[@]}
 length=${#arr[@]}
 
-function AscendingOrder() {
+function DescendingOrder() {
 	for (( i=0; i<$length; i++ ))
 	do
 		for(( j=i+1; j<=$length; j++ ))
 		do
-			if [[ ${arr[i]%.*} -gt ${arr[j]%.*} ]]
+			if [[ ${arr[i]%.*} -lt ${arr[j]%.*} ]]
 			then
 				temp=${arr[i]}
 				arr[i]=${arr[j]}
@@ -47,4 +48,4 @@ function AscendingOrder() {
 	done
 	echo ${arr[@]}
 }
-AscendingOrder
+DescendingOrder
